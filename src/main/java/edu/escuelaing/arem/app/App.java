@@ -4,7 +4,7 @@ import java.util.List;
 
 /**
  *
- * Jonathan Prieto.
+ * @author Jonathan Prieto.
  */
 public class App {
 
@@ -17,7 +17,7 @@ public class App {
         min = Float.parseFloat(setNumbers[0]);
         sumatoria = 0f;
         multiplicatoria = 1f;
-        numbersList = "{ Lista de numeros : ";
+        numbersList = "{ \"Lista de numeros\" : \" ";
         for (String n : setNumbers) {
             float number = Float.parseFloat(n);
             if (number > max) {
@@ -30,7 +30,7 @@ public class App {
             multiplicatoria *= number;
             numbersList = numbersList + n + " ";
         }
-        numbersList = numbersList + " }";
+        numbersList = numbersList + "\" }";
     }
 
     public static float getMax() {

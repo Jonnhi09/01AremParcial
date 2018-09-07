@@ -7,7 +7,7 @@ package edu.escuelaing.arem.designprimer;
 
 /**
  *
- * @author 2103258
+ * @author Jonathan Prieto
  */
 import java.io.*;
 import java.net.*;
@@ -15,7 +15,7 @@ import java.net.*;
 public class EchoClient {
 
     public static void main(String[] args) throws Exception {
-        URL google = new URL("http://www.google.com/");
+        URL google = new URL("https://immense-escarpment-48819.herokuapp.com/index");
         try (BufferedReader reader
                 = new BufferedReader(new InputStreamReader(google.openStream()))) {
             String inputLine = null;

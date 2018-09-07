@@ -12,7 +12,7 @@ import static spark.Spark.*;
 
 /**
  *
- * @author jonnhi
+ * @author Jonathan Prieto
  */
 public class SparkWebApp {
 
