@@ -15,12 +15,17 @@ import java.net.*;
 public class EchoClient {
 
     public static void main(String[] args) throws Exception {
-        URL google = new URL("https://immense-escarpment-48819.herokuapp.com/index");
+        URL google = new URL("https://immense-escarpment-48819.herokuapp.com/result?realNumber=1%2C2%2C3");
         try (BufferedReader reader
                 = new BufferedReader(new InputStreamReader(google.openStream()))) {
             String inputLine = null;
+            String respuesta = null;
+            boolean flag = false;
             while ((inputLine = reader.readLine()) != null) {
-                System.out.println(inputLine);
+                String[] lineas = inputLine.split(";");
+                for (String s : lineas) {
+                    System.out.println(s);
+                }
             }
         } catch (IOException x) {
             System.err.println(x);

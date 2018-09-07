@@ -53,51 +53,7 @@ public class SparkWebApp {
     private static String result(Request req, Response res) {
         String numbers = req.queryParams("realNumber");
         App.calculate(numbers);
-        String pageContent
-                = "<!DOCTYPE html>"
-                + "<html>"
-                + "    <head>"
-                + "        <title>Resul App</title>"
-                + "        <meta charset=\"UTF-8\">"
-                + "        <style>"
-                + "            table {"
-                + "                font-family: arial, sans-serif;"
-                + "                border-collapse: collapse;"
-                + "                width: 100%;"
-                + "            }"
-                + "            td, th {"
-                + "                border: 1px solid #dddddd;"
-                + "                text-align: center;"
-                + "                padding: 8px;"
-                + "            }"
-                + "            tr:nth-child(even) {"
-                + "                background-color: #dddddd;"
-                + "            }"
-                + "        </style>"
-                + "    </head>"
-                + "    <body>"
-                + "        <h2>Estadísticos</h2>"
-                + "        <p>La siguiente tabla contiene el resultado del máximo, mínimo, sumatoria y multiplicatoria del conjunto de datos dado.</p>"
-                + "        <table>"
-                + "            <tr>"
-                + "                <th>Colección de números en formato JSON</th>"
-                + "                <th>Maximo</th>"
-                + "                <th>Minimo</th>"
-                + "                <th>Sumatoria</th>"
-                + "                <th>Multiplicatoria</th>"
-                + "            </tr>"
-                + "            <tr>"
-                + "                <td>" + App.getNumbersList() + "</td>"
-                + "                <td>" + App.getMax() + "</td>"
-                + "                <td>" + App.getMin() + "</td>"
-                + "                <td>" + App.getSumatoria() + "</td>"
-                + "                <td>" + App.getMultiplicatoria() + "</td>"
-                + "            </tr>"
-                + "        </table>"
-                + "        <br />"
-                + "        <a href=\"/index\" title=\"Go to home\" align=center>Volver</a>"
-                + "    </body>"
-                + "</html>";
+        String pageContent = App.getNumbersList() + ";" + App.getMax() + ";" + App.getMin() + ";" + App.getSumatoria() + ";" + App.getMultiplicatoria();
         return pageContent;
     }
 }

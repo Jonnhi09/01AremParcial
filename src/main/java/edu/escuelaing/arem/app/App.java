@@ -11,6 +11,14 @@ public class App {
     private static float max, min, sumatoria, multiplicatoria;
     private static String numbersList;
 
+    /**
+     * Calculate calcula el maximo, minimo, sumatoria y multiplicatoria de un
+     * conjunto de numeros, ademas pasa a formato JSON el conjunto de numeros
+     * dado.
+     *
+     * @param numbers
+     * @throws NumberFormatException
+     */
     public static void calculate(String numbers) throws NumberFormatException {
         String[] setNumbers = numbers.split(",");
         max = Float.parseFloat(setNumbers[0]);
