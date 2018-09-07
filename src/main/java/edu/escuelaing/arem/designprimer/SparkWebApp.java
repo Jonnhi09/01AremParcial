@@ -53,7 +53,7 @@ public class SparkWebApp {
     private static String result(Request req, Response res) {
         String numbers = req.queryParams("realNumber");
         App.calculate(numbers);
-        String pageContent = App.getNumbersList() + ";" + App.getMax() + ";" + App.getMin() + ";" + App.getSumatoria() + ";" + App.getMultiplicatoria();
+        String pageContent = "{ " + App.getNumbersList() + " , \"Maximo\" : " + "\"" + App.getMax() + "\"" + " , \"Minimo\" : " + "\"" + App.getMin() + "\"" + " , \"Sumatoria\" : " + "\"" + App.getSumatoria() + "\"" + " , \"Multiplicatoria\" : " + "\"" + App.getMultiplicatoria() + "\"" + " }";
         return pageContent;
     }
 }
