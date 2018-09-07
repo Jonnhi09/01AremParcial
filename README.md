@@ -4,13 +4,8 @@
 #### Taller con Heroku
 ##### [Link Heroku](https://shrouded-savannah-97523.herokuapp.com/index)
 ---
-- Use Maven, HEROKU, GIT, Spark and GITHUB.
-- Write a web application to calculate the mean and standard deviation of a set of n
-real numbers.
-- Your program reads the n real numbers from a web page.
-- Use a linked list to store the n numbers for the calculations.
-- Thoroughly test the program. At least two tests should use the data in the
-columns of Table 1. Expected results are provided in Table 2.
-- Write a short article describing the architecture of the solution. Identify
-clearly abstractions of memory, communications channels and
-interpreters.
+- Construir un servicio WEB (puede usar Spark o Sockets) que reciba una lista de números y retorne una estructura JSON con: La lista de números, el máximo, el mínimo, la sumatoria y la multiplicatoria.
+- Despliegue el servicio en Heroku.
+- Construya un cliente JAVA par probar el servicio en heroku.
+- El cliente y el servidor debe entregarlos en un proyecto estructurado con Maven.
+- El cliente debe traer "quemada" en el código fuente la url de su aplicación desplegada en Heroku.

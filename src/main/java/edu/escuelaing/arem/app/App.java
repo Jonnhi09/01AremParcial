@@ -1,31 +1,56 @@
 package edu.escuelaing.arem.app;
 
+import java.util.List;
+
 /**
  *
  * Jonathan Prieto.
  */
 public class App {
 
-    private static float mean, standardDeviation;
+    private static float max, min, sumatoria, multiplicatoria;
+    private static String numbersList;
 
     public static void calculate(String numbers) throws NumberFormatException {
         String[] setNumbers = numbers.split(",");
-        LinkedList numberList = new LinkedList();
-        Estadistico statistical;
+        max = Float.parseFloat(setNumbers[0]);
+        min = Float.parseFloat(setNumbers[0]);
+        sumatoria = 0f;
+        multiplicatoria = 1f;
+        numbersList = "{ Lista de numeros : ";
         for (String n : setNumbers) {
-            numberList.addNode(Float.parseFloat(n)); //Agregar nodos a la LinkedList.
+            float number = Float.parseFloat(n);
+            if (number > max) {
+                max = number;
+            }
+            if (number < min) {
+                min = number;
+            }
+            sumatoria += number;
+            multiplicatoria *= number;
+            numbersList = numbersList + n + " ";
         }
-        statistical = new Estadistico(numberList);
-        mean = statistical.mean();
-        standardDeviation = statistical.standardDeviation();
-
+        numbersList = numbersList + " }";
     }
 
-    public static float getMean() {
-        return mean;
+    public static float getMax() {
+        return max;
     }
 
-    public static float getStandardDeviation() {
-        return standardDeviation;
+    public static float getMin() {
+        return min;
     }
+
+    public static float getSumatoria() {
+        return sumatoria;
+    }
+
+    public static float getMultiplicatoria() {
+        return multiplicatoria;
+    }
+
+    public static String getNumbersList() {
+        return numbersList;
+    }
+
 }
