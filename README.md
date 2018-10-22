@@ -2,7 +2,7 @@
 ## Arquitecturas empresariales
 ### Jonathan Prieto 
 #### Primer Parcial AREM
-##### [Link Heroku](https://immense-escarpment-48819.herokuapp.com/index)
+##### [Link Heroku - No disponible, correr localmente]()
 ---
 - Construir un servicio WEB (puede usar Spark o Sockets) que reciba una lista de números y retorne una estructura JSON con: La lista de números, el máximo, el mínimo, la sumatoria y la multiplicatoria.
 - Despliegue el servicio en Heroku.
